@@ -131,7 +131,8 @@
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
-            <artifactId>artemis-server</artifactId>
+            <artifactId>artemis-jms-server</artifactId>
+            <version>${artemis.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
