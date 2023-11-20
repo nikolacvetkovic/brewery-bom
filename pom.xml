@@ -13,7 +13,7 @@
 
     <groupId>io.github.nikolacvetkovic</groupId>
     <artifactId>mssc-brewery-bom</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
     <packaging>pom</packaging>
 
     <licenses>
@@ -45,6 +45,7 @@
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <jaxb.version>2.3.0</jaxb.version>
         <spring-state-machine.version>3.2.1</spring-state-machine.version>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
         <wiremock.version>3.2.0</wiremock.version>
     </properties>
 
@@ -69,6 +70,13 @@
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
                 <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -98,6 +106,10 @@
             <groupId>org.springframework.statemachine</groupId>
             <artifactId>spring-statemachine-core</artifactId>
             <version>${spring-state-machine.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
